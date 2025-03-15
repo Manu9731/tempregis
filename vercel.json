@@ -3,9 +3,6 @@
   "builds": [
     { "src": "application_registry.js", "use": "@vercel/node" }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/application_registry.js" }
-  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]

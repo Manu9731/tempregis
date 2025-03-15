@@ -1,6 +1,0 @@
-{
-  "version": 2,
-  "builds": [
-    { "src": "application_registry.js", "use": "@vercel/node" }
-  ]
-}

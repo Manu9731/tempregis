@@ -15,13 +15,13 @@ import path from "path";
 import fs from 'fs';
 import bodyParser from 'body-parser';
 import cors from "cors";
-import { createConnection, createConnectionPg, createConnectionMongoose} from "./dbconnection/dbcon.js"
+import { createConnection, createConnectionPg, createConnectionMongoose} from "../dbconnection/dbcon.js"
 import swaggerUi from 'swagger-ui-express';
 import YAML from 'yamljs';
-import { Encrypter } from './src/utils/cryptoUtil.js';
-import sendEmail from './src/utils/emailAlert.js';
-import createPdfDocument from './src/utils/createPdf.js';
-import { updateContents, checkFileExists } from './src/utils/fileHandle.js';
+import { Encrypter } from '../src/utils/cryptoUtil.js';
+import sendEmail from '../src/utils/emailAlert.js';
+import createPdfDocument from '../src/utils/createPdf.js';
+import { updateContents, checkFileExists } from '../src/utils/fileHandle.js';
 
 const swaggerDocument = YAML.load('./swagger.yaml');
 // import { stringify } from 'querystring';

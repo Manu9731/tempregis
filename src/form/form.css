@@ -1,0 +1,179 @@
+    /* Base styles for the form */
+    .form {
+        margin-top: 30px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f1f8f0; /* Light grey-blue background color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        /* background-color: antiquewhite; Alternatively: background-color: rgba(184, 238, 238, 0.1); */
+        /* min-height: 500px; */
+        opacity: 1;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 20px; /* Adds gap between rows */
+        /* position: relative; 
+        overflow: hidden;  */
+    }
+
+    /* .form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../istaffvision_framework.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 1; 
+        z-index: 0; 
+    } */
+
+    /* Styles for the input container */
+    .inputcontainer {
+        width: 500px;
+        padding: 0 8px;
+        height: 50px;
+        border-radius: 10px;
+        color: black;
+        position: relative;
+    }
+
+    /* Styles for the input field */
+    .input {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        border: 1px solid #ced4da;
+        outline: none;
+        color: #726D7B;
+        padding: 16px 10px;
+    }
+
+    /* Styles for the placeholder */
+    .placeholder {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 18px;
+        color: #726D7B;
+        min-width: 58px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        transition: all 0.2s ease-in-out; 
+    }
+
+
+.input:focus + .placeholder,
+.input:not(:placeholder-shown) + .placeholder {
+    transform: translateY(-15px); 
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.input:focus,
+.input:active {
+    box-shadow: 0 0 5px #6222CC;
+}
+
+.error-message{
+    color: red;
+    margin-top: 1px;
+}
+
+.p{
+    padding: 0 8px;
+}
+
+
+
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+    /* visibility: hidden; */
+    position: absolute;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 10px;
+    font-size: 15px;
+    z-index: 1;
+    bottom: 95%;
+    left: -32%;
+    margin-left: -2vw;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-bottom-right-radius: 0px;
+}
+
+@media (max-width: 1200px){
+    .tooltip .tooltiptext{
+        bottom: 95%;
+        left: -37.5%;
+        margin-left: -2vw;
+    
+    }
+}
+
+/* .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  } */
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext.action-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* .submitfor-register{
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  } */
+
+.submitfor-register:active, 
+.submitfor-register:active ~ .submit {
+    transform: scale(1.01);
+    border: 2px solid rgb(118, 233, 118);
+}
+
+.submitfor-register:hover {
+    cursor: pointer;
+}
+
+
+
+.host-user, .password-port, .host-email, .email-pass, .service-toemail{
+    display: flex;
+}
+
+.host-user .inputcontainer, .password-port .inputcontainer, .host-email .inputcontainer, .email-pass .inputcontainer, .service-toemail .inputcontainer{
+    width: 250px;
+    padding: auto;
+}
+
+.host-user .input, .password-port .input{
+    width: 100%;
+}

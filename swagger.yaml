@@ -1,0 +1,88 @@
+openapi: 3.0.0
+info:
+  title: Application Registry API
+  description: API for registering applications.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3110
+    description: Local server
+
+paths:
+  /submit:
+    post:
+      summary: Register a new application
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                appname:
+                  type: string
+                  description: Name of the application
+                  example: "MyApp"
+                env:
+                  type: string
+                  description: Environment name
+                  example: "ProdEnv"
+                baseurl:
+                  type: string
+                  description: Base URL of the application
+                  example: "https://example.com"
+                basepath:
+                  type: string
+                  description: Base path for the application
+                  example: "D:/BetaCustomer_Automation/config"
+                decryptionkey:
+                  type: string
+                  description: Key used for decryption
+                  example: "mysecretkey"
+                dbconnection:
+                  type: string
+                  description: Database connection status (Yes/No)
+                  example: "Yes"
+                dbtype:
+                  type: string
+                  description: Type of the database
+                  example: "MYSQL"
+                dbhost:
+                  type: string
+                  description: Database host address
+                  example: "localhost"
+                dbuser:
+                  type: string
+                  description: Database username
+                  example: "admin"
+                dbpassword:
+                  type: string
+                  description: Database password
+                  example: "password123"
+                dbport:
+                  type: integer
+                  description: Database port number (0-65535)
+                  example: 3306
+              required:
+                - appname
+                - env
+                - baseurl
+                - basepath
+                - decryptionkey
+                - dbconnection
+                - dbtype
+                - dbhost
+                - dbuser
+                - dbpassword
+                - dbport
+      responses:
+        '200':
+          description: Successful registration
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Message:
+                    type: string
+                    example: "Data inserted successfully"

@@ -1,0 +1,69 @@
+.app {
+  height: 100%;
+  width: 50%;
+  /* background-color: #FFFFFF; */
+  padding: 1rem 3rem;
+  /* background-image: url("./istaffvision_framework.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+
+.headline-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f1f8f0;
+}
+
+.headline-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.headline {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sub-headline {
+  font-size: 1rem;
+  color: #555555;
+  margin-top: 10px;
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  /* background-image: url("./Test.png"); */
+  background-image: url("./PAAVANA_UI_LOGO.png");
+  /* background-image: url("./istaffvision.png"); */
+  /* background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+.copyright{
+  margin-top: 15px;
+  text-align: center;
+  color: #555555;
+  font-size: 14px;
+}

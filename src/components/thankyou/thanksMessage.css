@@ -1,0 +1,63 @@
+.thanksmessage-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.thanks-message {
+    width: 350px;
+    height: 175px;
+    background-color: #E0E0E0;  /* Light gray background */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    animation: translate 0.5s ease-in 0s 1 normal;
+}
+
+@keyframes translate {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.thanks-message::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: thankyou 2s linear 0s 1 normal forwards;
+}
+
+@keyframes thankyou {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+
+.thanks-icon{
+    color: green;
+    font-size: 40px;
+}

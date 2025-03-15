@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "application_registry.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/application_registry.js" }
+  ]
+}
